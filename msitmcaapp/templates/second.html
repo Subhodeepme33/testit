@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="/login" method="POST">
+		{% csrf_token %}
+	<table>
+		
+		<tr>
+			<td>
+				<input type="text" name="uname" placeholder="Enter Username">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="password" name="pass" placeholder="Enter Password">
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<input type="submit" name="submit">
+				<input type="reset" name="Reset">
+			</td>
+		</tr>
+	</table>
+	</form>
+
+	<form action="/searchdata" method="POST">
+		{% csrf_token %}
+		<input type="email" name="email">
+		<input type="submit" name="search">
+	</form>
+</body>
+</html>

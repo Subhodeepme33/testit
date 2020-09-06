@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<script type="text/javascript" src="{% static 'javascript/validation.js' %}"></script>
+
+<!-- Bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body id="homebody">
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			<!-- <img src=""> -->
+			<a href="#" class="navbar-brand">MyCompany</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>	
+</nav>
+
+<label id="txt1">Welcome to Django Home</label>
+<!-- <h1>Welcome to Django Home</h1> -->
+<a href="/second">Click Here</a>
+
+<form action="/saveUser" method="POST" onsubmit="return validation()" class="form-group">
+	{% csrf_token %}
+	<table>
+		<tr>
+			<td>
+				<input type="text" name="fname" placeholder="Enter Name" id="inpt1" class="form-control">
+			</td>
+
+		</tr>
+		<tr>
+			<td>
+				<input type="text" name="lname" placeholder="Enter Last Name" id="inpt2" class="form-control"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="email" name="email" placeholder="Enter Email" id="inpt3" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" name="uname" placeholder="Enter Username" id="inpt4" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="password" name="pass" placeholder="Enter Password" id="inpt5" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="password" name="cnf_pass" placeholder="Enter Password Again" id="inpt6" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="submit" name="submit" class="btn btn-success">
+			</td>
+		</tr>
+	</table>
+</form>
+<!-- 
+xs
+sm
+md
+lg -->
+<div class="container">
+	<div class="col-md-12">
+		<div class="col-md-4">
+			<i class="fas fa-handshake-alt-slash"></i>
+		</div>
+		<div class="col-md-4">
+			<i class="fas fa-hands-wash"></i>
+		</div>
+		<div class="col-md-4">
+			<i class="fas fa-head-side-mask"></i>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+<div class="jumbotron">
+	<h3 style="text-align: center;">Goods and Service Tax</h3>
+	<p>Goods and Services Tax (GST) is an indirect tax (or consumption tax) used in India on the supply of goods and services. It is a comprehensive, multistage, destination-based tax: comprehensive because it has subsumed almost all the indirect taxes except a few state taxes. Multi-staged as it is, the GST is imposed at every step in the production process, but is meant to be refunded to all parties in the various stages of production other than the final consumer and as a destination-based tax, it is collected from point of consumption and not point of origin like previous taxes.
+	<span><i class="fas fa-hands-wash"></i></span>
+</p>
+</div>
+</div>
+
+<!-- Footer -->
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			<!-- <img src="" class="img-circle/img-thumbnail/img-rectangle/img-rounded"> -->
+			<a href="#" class="navbar-brand">About Us</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#">Facebook</a></li>
+			<li><a href="#">Instagram</a></li>
+			<li><a href="#">Twitter</a></li>
+			<li><a href="#">LinkedIn</a></li>
+		</ul>
+	</div>	
+</nav>
+</body>
+</html>

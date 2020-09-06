@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	
+</head>
+<body id="homebody">
+
+{% if user.is-authenticated %}
+	Welcome {{user.first_name}}
+	<p> You are logged in </p>
+{% else %}
+	<p> You are not logged in </p>
+	<a href='/'>Login</a>
+<%endif %>
+
+
+Welcome Home
+<table id="tab1">
+	<tr>
+		<td>First Name</td>
+		<td>Last Name</td>
+		<td>User Name</td>
+		
+	</tr>
+	{% for data in datas %}
+	<tr>
+		<td>{{data.first_name}}</td>
+		<td>{{data.last_name}}</td>
+		<td>{{data.username}}</td>
+	</tr>
+	{% endfor %}
+</table>
+</body>
+</html>

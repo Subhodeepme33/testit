@@ -1,0 +1,24 @@
+#tab1 {
+	background-color: cyan;
+
+}
+
+#homebody {
+	background-image: url('/static/image/background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#txt1 {
+	font-size: 30px;
+	font-family: "Monotype Corsiva";
+	color: #06493d;
+}
+
+#inpt1 {
+	border-radius: 5px;
+	height: 50px;
+	width: 150px;
+	margin-bottom: 15px;
+	padding-left: 20px;
+}
